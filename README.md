@@ -10,7 +10,7 @@ The algorithm classifies caps into three categories:
 The inspection pipeline utilizes several image processing techniques:
 *   **Cap Localization:** Uses Gaussian blurring, Canny Edge Detection, and the Hough Circle Transform to find the cap's center and radius.
 *   **Missing Liner Detection:** Creates a circular mask and calculates the average pixel intensity to determine if the dark liner is present against the lighter cap background.
-*   **Incomplete Liner Detection:** Uses Sobel operators to calculate image gradients, isolates the inner liner area, and applies the Probabilistic Hough Line Transform (`HoughLinesP`) to identify the straight cuts characteristic of a damaged liner.
+*   **Incomplete Liner Detection:** Uses Sobel Edge Detection to calculate image gradients, isolates the inner liner area, and applies the Probabilistic Hough Line Transform (`HoughLinesP`) to identify the straight cuts characteristic of a damaged liner.
 
 ## Prerequisites
 To run this script, you will need Python installed along with the following libraries:
